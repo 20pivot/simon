@@ -44,6 +44,8 @@ function newLevel() {
 }
 
 function lightButton(button) {
+  var audio = new Audio(button.id + '.m4a');
+  audio.play();
   button.classList.toggle('active');
   setTimeout(() => {
     button.classList.toggle('active');
@@ -56,14 +58,16 @@ function buttonPress(event) {
     if (button === patron[indexPlayerPatron]) {
       indexPlayerPatron = indexPlayerPatron + 1;
       lightButton(button);
-      if(indexPlayerPatron === patron.length) {
+      if (indexPlayerPatron === patron.length) {
         newLevel();
       }
     } else {
+      var audio = new Audio('gameover.m4a');
+      audio.play();
       state = 'gameover';
       title.innerText = 'gameover';
     }
   }
 }
 
-console.clear()
+console.clear();
