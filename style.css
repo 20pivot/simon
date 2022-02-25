@@ -1,0 +1,35 @@
+body {
+  background: purple;
+  text-align: center;
+  font-family: 'VT323', monospace;
+}
+
+button {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 5px;
+  cursor: pointer;
+}
+
+button.active {
+  box-shadow: 0px 0px 20px white;
+}
+
+#red {
+  background: red;
+}
+
+#green {
+  background: green;
+}
+
+#blue {
+  background: blue;
+}
+
+#yellow {
+  background: yellow;
+}
