@@ -44,7 +44,7 @@ function newLevel() {
 }
 
 function lightButton(button) {
-  var audio = new Audio(button.id + '.m4a');
+  var audio = new Audio('sounds/' + button.id + '.m4a');
   audio.play();
   button.classList.toggle('active');
   setTimeout(() => {
@@ -62,7 +62,7 @@ function buttonPress(event) {
         newLevel();
       }
     } else {
-      var audio = new Audio('gameover.m4a');
+      var audio = new Audio('sounds/gameover.m4a');
       audio.play();
       state = 'gameover';
       title.innerText = 'gameover';
